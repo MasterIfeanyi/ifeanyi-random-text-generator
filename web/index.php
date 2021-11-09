@@ -1,36 +1,58 @@
+<?php
+
+$quotes = [
+
+	[	"author" => "Anthony",
+		"text" => "A whole 'nother world"
+	],
+
+
+	[	"author" => "Michael",
+		"text" => "An investment in knowledge is wise"
+	],
+
+	[	"author" => "Ifeanyi",
+		"text" => "World peace is attainable"
+	],
+
+	[	"author" => "DeShaun",
+		"text" => "Black Men are strong"
+	],
+
+	[	"author" => "Ezekiel",
+		"text" => "God spoke to Me"
+	],
+
+	[	"author" => "Chris",
+		"text" => "Why are make a billion dollars when you can make 3"
+	],
+
+	[	"author" => "David",
+		"text" => "If I can make 20 dollars in 2 minutes, why not go for 100 dollars in 4 minutes"
+	],
+];
+
+
+// $quote = $quotes[rand(0, count($quotes) - 1)];
+$quote = $quotes[array_rand($quotes)];
+$quoteText = $quote['text'];
+$quoteAuthor = $quote['author'];
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Random Text Generator</title>
 </head>
 <body>
 
-<form action="index.php" method="post">
-    <input type="text" name="search" placeholder="search for members" onkeyup="searchq()">
-    <input type="submit" value="Submit">
-</form>
+<blockquote>
+	<h2>&ldquo; <?=$quoteText ?>&rdquo;</h2>
+	<strong>- <?php echo $quoteAuthor; ?></strong>
+</blockquote>
 
 
-<div id="output">
-
-</div>
-
-<?php //print("$output"); ?>
-
-<script src="jquery-3.4.1.min.js"></script>
-
-<script>
-
-function searchq(){
-    var searchTxt = $("input[name='search']").val();
-
-    $.post("search.php", {searchVal: searchTxt}, function(output){
-        $("#output").html(output);
-    });
-}
-</script>
 
 </body>
 </html>
