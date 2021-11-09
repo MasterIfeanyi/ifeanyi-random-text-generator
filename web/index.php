@@ -47,6 +47,9 @@ $quoteAuthor = $quote['author'];
 </head>
 <body>
 
+	<h1>Random Text Generator </h1>
+	<h5>Refresh to see changes </h5>
+	
 <blockquote>
 	<h2>&ldquo; <?=$quoteText ?>&rdquo;</h2>
 	<strong>- <?php echo $quoteAuthor; ?></strong>
