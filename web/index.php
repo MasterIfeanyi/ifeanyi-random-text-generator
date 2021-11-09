@@ -24,7 +24,7 @@ $quotes = [
 	],
 
 	[	"author" => "Chris",
-		"text" => "Why are make a billion dollars when you can make 3"
+		"text" => "Why make a billion dollars when you can make 3"
 	],
 
 	[	"author" => "David",
